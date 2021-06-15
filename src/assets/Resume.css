@@ -1,0 +1,279 @@
+.brand-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: solid 1px grey;
+}
+
+.resume-img {
+  margin-top: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 2px grey;
+}
+
+.portfolio-block.cv {
+  padding-top: 70px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-block {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.portfolio-block {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.portfolio-block.cv .group {
+  max-width: 800px;
+  margin: auto;
+}
+
+.portfolio-block.cv .group:not(:first-child) {
+  margin-top: 90px;
+}
+
+.row {
+  text-align: left !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.portfolio-info-card {
+  padding: 40px;
+  /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.075);*/
+  height: 100%;
+}
+
+.portfolio-block.cv h2 {
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.portfolio-info-card h2 {
+  margin-top: 0;
+  margin-bottom: 24px !important;
+  font-size: 1.4rem;
+}
+
+.portfolio-info-card.skills h3 {
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.portfolio-info-card.skills .progress {
+  height: 3px;
+}
+
+.progress,
+.progress-bar {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.progress {
+  height: 1rem;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    margin-bottom: 60px;
+  }
+}
+
+.heading {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .period {
+    float: right;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .period-holder {
+    text-align: right !important;
+  }
+}
+
+.period {
+  margin-left: 0;
+  font-size: 0.8rem;
+  float: none;
+  font-weight: 700;
+  margin-top: 4px;
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.period-holder {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.education.group .organization {
+  background-color: #20c997;
+}
+
+.skills .framework {
+  background-color: rgb(170, 40, 140);
+}
+
+.organization {
+  font-weight: bold;
+  font-size: 0.85em;
+  background-color: #0ea0ff;
+  display: inline-block;
+  color: #fff;
+  padding: 2px 8px;
+  margin-right: 4px;
+  border-radius: 2em;
+}
+
+.text-muted {
+  font-weight: 600;
+  color: #585e63 !important;
+  text-align: left;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.item {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .item {
+    font-weight: 300;
+  }
+}
+
+.bullets {
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+.icon {
+  font-size: 1.3em;
+  color: #6091ef;
+  position: relative;
+  bottom: 4px;
+}
+
+.tip {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .cmodule th:nth-child(4) {
+    display: none;
+  }
+
+  .cmodule td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tip {
+    pointer-events: initial;
+  }
+}
+
+.fa {
+  margin: 0 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /*font-size: 30px;*/
+  /*width: 50px;*/
+  /*text-align: center;*/
+  /*text-decoration: none;*/
+  /*margin: 5px 2px;*/
+}
+
+.fa:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.facebook {
+  background: #3B5998 !important;
+  opacity: 0.9;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE !important;
+  opacity: 0.9;
+  color: white;
+}
+
+.google {
+  background: #dd4b39 !important;
+  opacity: 0.85;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5 !important;
+  opacity: 0.85;
+  color: white;
+}
+
+.github {
+  background: black !important;
+  opacity: 0.8;
+  color: white;
+}
+
+.file {
+  background: #555555 !important;
+  opacity: 0.85;
+  color: white;
+}
+
+.info-icon {
+  color: #6c757d;
+}
+
+.info-icon:hover {
+  cursor: pointer;
+  color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .popup-table th:nth-child(1) {
+    display: none;
+  }
+
+  .popup-table td:nth-child(1) {
+    display: none;
+  }
+}

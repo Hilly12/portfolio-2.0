@@ -1,0 +1,35 @@
+/* This CSS resource incorporates links to font software which is the
+   valuable copyrighted property of Type Network, Inc. and/or their
+   suppliers. You may not attempt to copy, install, redistribute,
+   convert, modify or reverse engineer this font software. Please
+   contact Type Network with any questions: www.typenetwork.com */
+
+@font-face {
+  font-family: "Input Mono It";
+  font-display: auto;
+  font-weight: normal;
+  font-style: italic;
+
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/10760/fontfile/eot/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/10760/fontfile/eot/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c#iefix")
+      format("embedded-opentype"),
+    url("//cloud.typenetwork.com/projectLicenseWeb/10760/fontfile/woff2/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c")
+      format("woff2"),
+    url("//cloud.typenetwork.com/projectLicenseWeb/10760/fontfile/woff/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Input Mono Reg";
+  font-display: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/10759/fontfile/eot/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/10759/fontfile/eot/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c#iefix")
+      format("embedded-opentype"),
+    url("//cloud.typenetwork.com/projectLicenseWeb/10759/fontfile/woff2/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c")
+      format("woff2"),
+    url("//cloud.typenetwork.com/projectLicenseWeb/10759/fontfile/woff/?e2d68ffec71eb8a0fffc2f91cfffcece2dae248c")
+      format("woff");
+}

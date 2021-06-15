@@ -1,0 +1,36 @@
+.stock-row-h {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .line {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.stock-row {
+  font-weight: normal !important;
+}
+
+.table-overflow {
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.table-overflow::-webkit-scrollbar {
+  display: none;
+}
+
+/*.stock-row th:nth-child(4) {*/
+/*  display: none;*/
+/*}*/
+
+/*.stock-row td:nth-child(4) {*/
+/*  display: none;*/
+/*}*/
+
+/*.MuiSlider-mark {*/
+/*  background-color: blue;*/
+/*}*/
