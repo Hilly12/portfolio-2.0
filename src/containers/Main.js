@@ -9,6 +9,7 @@ import pcg from "../games/pcg/CaveGenerator";
 import Spaceshooter from "../games/spaceshooter/Spaceshooter";
 import Chess from "../games/chess/Chess";
 import Stocks from "../games/stocks/Stocks";
+import BlogPage from "../pages/BlogPage";
 
 class Main extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Main extends React.Component {
       <Switch>
         <Route exact path="/" component={LandingPage}/>
         <Route path="/projects" component={ProjectsPage}/>
-        <Route path="/blog" component={ProjectsPage}/>c
+        <Route path="/blog" component={BlogPage}/>
         <Route exact path="/resume" component={ResumePage}/>
         <Route exact path="/sandbox" component={ArcadePage}/>
         <Route exact path="/sandbox/snake" component={Snake}/>

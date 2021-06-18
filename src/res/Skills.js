@@ -13,6 +13,10 @@ const languages = [
   },
   {
     name: "C++",
+    proficiency: 75,
+  },
+  {
+    name: "Haskell",
     proficiency: 70,
   }
 ];
@@ -47,7 +51,10 @@ const languageDetails = [
 
 const languageExtra = ['Haskell', 'Kotlin', 'Go', 'SQL', 'Bash', '...'];
 
-const frameworks = ['Tensorflow', 'Django', 'React', '.NET', 'PyTorch', 'Keras', 'MongoDB', 'Unity', 'ExpressJS', 'Bootstrap', 'Postgres', 'MongoDB', 'Android Studio'];
+const frameworks = [
+  'Tensorflow', 'Python Data Tools', 'PyTorch', 'Keras', 'Django', 'Flask', 'ExpressJS',
+  'Postgres', 'MongoDB', 'Unity', 'React', '.NET', 'Android Development'
+];
 
 const Skills = {
   languages: languages,

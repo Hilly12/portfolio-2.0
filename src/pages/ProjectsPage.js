@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from "react";
 import Footer from "../components/Footer";
-import BaseRouter from "../routes.js";
+import ProjectList from "../containers/ProjectList";
 
 class ProjectsPage extends Component {
   render() {
@@ -8,7 +8,7 @@ class ProjectsPage extends Component {
       <Fragment>
         <div className="container" style={{ minHeight: "100vh" }}>
           <div style={{ marginTop: "20px" }}/>
-          <BaseRouter/>
+          <ProjectList/>
         </div>
         <Footer/>
       </Fragment>

@@ -9,7 +9,7 @@ class Modal extends Component {
         <div style={{ maxWidth: "500px"}} className="popup_inner">
           <div className="popup-header">
             <h3 className="text-info">{this.props.title}</h3>
-            <button className="btn btn-danger btn-popup-close" onClick={this.props.toggle}>X</button>
+            <button className="btn btn-red btn-popup-close" onClick={this.props.toggle}>X</button>
           </div>
           <div style={{ paddingTop: '10px', maxHeight: `${maxHeight}`, textAlign: 'center', overflowY: "auto" }}>
             {this.props.children}

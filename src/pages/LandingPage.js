@@ -17,6 +17,7 @@ import axios from "axios";
 import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
 import {faAddressCard} from "@fortawesome/free-solid-svg-icons/faAddressCard";
 import {faDragon} from "@fortawesome/free-solid-svg-icons/faDragon";
+import {faCommentAlt} from "@fortawesome/free-solid-svg-icons";
 
 class LandingPage extends Component {
   constructor(props) {
@@ -146,7 +147,7 @@ class LandingPage extends Component {
             </div>
             <div style={{ margin: '25px 0 0 0' }}>
               <TypingEffect className="lead" typingSpeed={50} pauseBeforeDeleting={2000} pauseBeforeRestarting={50}
-                            data={["Software Developer", "Machine Learning Engineer", "Computer Scientist"]}/>
+                            data={["Machine Learning Engineer", "Software Developer", "Computer Scientist"]}/>
             </div>
             {/*<p className="bio">Hi</p>*/}
             {/*<br className="noselect"/>*/}
@@ -156,6 +157,7 @@ class LandingPage extends Component {
               <p><FontAwesomeIcon icon={faCode} style={{ minWidth: '30px' }}/>Projects</p>
               <p><FontAwesomeIcon icon={faAddressCard} style={{ minWidth: '30px' }}/>Resume</p>
               <p><FontAwesomeIcon icon={faDragon} style={{ minWidth: '30px' }}/>Sandbox</p>
+              <p><FontAwesomeIcon icon={faCommentAlt} style={{ minWidth: '30px' }}/>Blog</p>
             </div>
             <br className="noselect"/>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

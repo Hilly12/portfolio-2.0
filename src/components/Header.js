@@ -8,6 +8,7 @@ import {
   faCode,
   faDiceD20,
   faDragon,
+  faCommentAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
@@ -63,7 +64,7 @@ class Header extends Component {
               }}
               to={"/"}
             >
-              <FontAwesomeIcon style={{ marginRight: '2px' }} icon={faDiceD20}/> Portfolio
+              <FontAwesomeIcon style={{ marginRight: '2px' }} icon={faDiceD20}/> <span className="hide-380">Portfolio</span>
               {/*<span style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>{'</>'}</span>*/}
             </Link>
             <Nav className="nav navbar-nav">
@@ -104,6 +105,19 @@ class Header extends Component {
                     icon={faDragon}
                   />
                   <span className="noselect">Sandbox</span>
+                </NavLink>
+              </NavItem>
+              <NavItem className="nav-item">
+                <NavLink
+                  to="/blog"
+                  className="nav-link inline hide-span-mobile"
+                  activeStyle={{ color: "white" }}
+                >
+                  <FontAwesomeIcon
+                    style={{ marginRight: "5px" }}
+                    icon={faCommentAlt}
+                  />
+                  <span className="noselect">Blog</span>
                 </NavLink>
               </NavItem>
             </Nav>

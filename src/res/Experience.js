@@ -24,29 +24,28 @@ const workexp = [
       "Developed an MVP for a contextual sales bot in Python.",
       "Additionally worked on adding features to a medical transcription application.",
       "Implemented features including voice commands for selection and formatting, voice enabled RTF macros.",
-      "Attended the Voice Tech Summit India Conference with the Augnito team to learn more about innovative ideas " +
-      "in the field."
+      "Attended the Voice Tech Summit India Conference to learn about innovative ideas in NLU."
     ],
   },
-  {
-    title: "Freelancer",
-    period: "July 2018 - September 2019",
-    institution: "Self Employed",
-    description: [
-      "Worked on several short term projects involving prototyping and web development using primitive web technologies.",
-      "Taught beginners Java, Python and web development online.",
-    ]
-  },
-  {
-    title: "Data Science Work Experience",
-    institution: "MET Office",
-    period: "June 2017 - July 2017",
-    description: [
-      "Collaboration with the Crescendo project team to analyze global temperature and rainfall data",
-      "Created an informative animated plot in Python using Iris, Matplotlib libraries",
-      "Demonstrated it to the public at the Royal Society Summer Science Exhibition",
-    ],
-  },
+  // {
+  //   title: "Freelancer",
+  //   period: "July 2019 - September 2019",
+  //   institution: "Self Employed",
+  //   description: [
+  //     "Worked on several short term projects involving prototyping and web development using primitive web technologies.",
+  //     "Taught beginners Java, Python and web development online.",
+  //   ]
+  // },
+  // {
+  //   title: "Data Science Work Experience",
+  //   institution: "MET Office",
+  //   period: "June 2017 - July 2017",
+  //   description: [
+  //     "Collaboration with the Crescendo project team to analyze global temperature and rainfall data.",
+  //     "Created an informative animated plot in Python using Iris, Matplotlib libraries.",
+  //     "Demonstrated it to the public at the Royal Society Summer Science Exhibition.",
+  //   ],
+  // },
 ];
 
 const education = [

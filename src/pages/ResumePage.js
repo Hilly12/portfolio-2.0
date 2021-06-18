@@ -68,7 +68,7 @@ class ResumePage extends Component {
             <div className="bio group" style={{ marginTop: '30px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img className="brand-img noselect"
-                     src="https://lh3.googleusercontent.com/pw/ACtC-3dnSyKxnAC4Ri17CWuHA0GlDan8LI7bi5CMA4Q2HcDhpIMVdBoOMeZkDmcATXT3G_wIlGO5P8nSq1YjV4D98GxJca-g1YGjD1IF8WAWRxCJtI6bFTkPcYc8w4ngSD0w47x8k7-vl8zkmhRae159xQYYVg=s800-no?authuser=0"
+                     src="https://lh3.googleusercontent.com/pw/ACtC-3cMnfHSzb529a2rzKsb7JVY2ZrhFtTbn9OcH77cXQ1T5eA4a2Mr9dqc4dWHV_zj4tkdvsB2qNWZnhKSrTiiJPkPICI5K7unXA8qgrmkU34YZFPRdN3XZcKpH6zURmjMB0dNwiFD5ACFlobKwVHJyaKx=s400-no?authuser=0"
                      alt="" onLoad={this.OnLoaded}/>
               </div>
               <br className="noselect"/>

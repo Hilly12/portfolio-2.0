@@ -266,12 +266,6 @@
   }
 }
 
-.project-image-holder {
-  /*margin: 0 -15px;*/
-  margin: 10px 0;
-  /*padding-top: 56.25%;*/
-}
-
 .parallax {
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -280,8 +274,17 @@
   background-size: cover;
 }
 
+.project-image-holder {
+  /*margin: 0 -15px;*/
+  margin: 10px 0;
+  /*padding-top: 56.25%;*/
+}
+
 .project-image {
-  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .my-avatar {
@@ -290,16 +293,58 @@
   transition: 0.3s;
 }
 
-.blog-content {
-  font-size: 14px;
-  text-align: left;
+.btn-red {
+  color: white;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
-@media (min-width: 595px) {
-  .blog-content {
-    font-size: 16px;
-    text-align: justify;
-  }
+
+.btn-red:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+  box-shadow: 0 0 0 0.1rem rgba(225, 83, 97, 0.5);
+}
+
+.btn-red:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+.btn-green {
+  color: white;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+
+.btn-green:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.1rem rgba(72, 180, 97, 0.5);
+}
+
+.btn-green:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.btn-blue {
+  color: white;
+  background-color: #3b99e0;
+  border-color: #3b99e0;
+}
+
+.btn-blue:hover {
+  color: white;
+  background-color: #954676;
+  background-color: #2187d3;
+  border-color: #2080c8;
+  box-shadow: 0 0 0 0.1rem rgba(88, 168, 229, 0.5);
+}
+
+.btn-blue:focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 168, 229, 0.5);
 }
 
 .btn-git {
@@ -311,9 +356,49 @@
 .btn-git:hover {
   color: white;
   background-color: #954676;
+  box-shadow: 0 0 0 0.1rem rgba(236, 29, 155, 0.2);
   /*background-color: #8e2580;*/
 }
 
 .btn-git:focus {
   box-shadow: 0 0 0 0.2rem rgba(236, 29, 155, 0.2);
+}
+
+.blog-header {
+  display: block;
+  font-size: 1.6em;
+}
+
+.blog-subheader {
+  display: block;
+  font-size: 1em;
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+.blog-header-x {
+  display: block;
+  font-size: 1.5em;
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+.blog-content {
+  font-size: 14px;
+  text-align: left;
+}
+
+@media (min-width: 586px) {
+  .blog-content {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .blog-header {
+    font-size: 1.8em;
+  }
+
+  .blog-subheader {
+    font-size: 1.2em;
+  }
 }

@@ -39,7 +39,7 @@
   color: #fff;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hide-span-mobile span {
     display: inline;
   }
@@ -50,6 +50,16 @@
 
   .nav-info {
     display: none;
+  }
+}
+
+.hide-380 {
+  display: none;
+}
+
+@media (min-width: 380px) {
+  .hide-380 {
+    display: inline;
   }
 }
 

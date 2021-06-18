@@ -6,6 +6,7 @@ import Image from "../components/Image";
 import Avatar from "@material-ui/core/Avatar";
 import parse from "../util/DateParse";
 
+const ttl = 600000; // ms - 10 min
 const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavShxfukNKuTgwBCNc4vhrn6kQjxNMY58bzBfc_tjFbUmg6Y66xApp-P5Wxwxi2hArJLqiZwQIxLywTJdmBNrmUc8-7fxB2C8SgHT-aX6TVQ6VxhGrEU3R5dBNGx4lOGjmUpVrOR=s60";
 
 const img = (imgSrc, key) => {
@@ -68,7 +69,7 @@ function visit(node, props = null) {
   }
 }
 
-class ProjectDetail extends Component {
+class BlogDetail extends Component {
   constructor(props) {
     super(props);
     this.fetch = this.fetch.bind(this);
@@ -76,7 +77,7 @@ class ProjectDetail extends Component {
     this.state = {
       avatarLoading: true,
       loading: true,
-      projectData: {},
+      article: {},
     };
   }
 
@@ -89,40 +90,53 @@ class ProjectDetail extends Component {
   componentDidMount() {
     window.scroll(0, 0);
 
-    setTimeout(this.fetch, 300);
-  }
-
-  fetch() {
-    // http://127.0.0.1:8000/api/projects/
-    // https://www.aahilm.com/api/projects/
-
-    const { projectid } = this.props.match.params;
-    axios
-      .get(`https://www.aahilm.com/api/projects/${projectid}`)
-      .then((response) => {
-        const { content, title } = parseData(response.data)
+    let { blogid } = this.props.match.params;
+    
+    let articlePayload = JSON.parse(localStorage.getItem('articles'));
+    if (articlePayload && articlePayload.expiry > Date.now()) {
+      let articles = articlePayload.data.filter(a => a.id.toString() === blogid);
+      if (articles.length === 1) {
+        const { content, title } = parseData(articles[0])
         this.setState({
           loading: false,
-          projectData: response.data,
+          article: articles[0],
           title: title,
           content: content
         });
-        if (!this.state.projectData.article || content === "") {
-          this.setState({ projectData: {} });
-        }
-      }).catch(e => {
-      this.setState({
-        loading: true
-      });
+      }
+    } else {
+      setTimeout(this.fetch, 300);
+    }
+  }
+
+  fetch() {
+    const { blogid } = this.props.match.params;
+
+    axios.get("https://www.dractal.com/stocks/blog/").then((response) => {
+      let payload = {
+        data: response.data,
+        expiry: Date.now() + ttl
+      }
+      localStorage.setItem('articles', JSON.stringify(payload));
+      let articles = response.data.filter(a => a.id.toString() === blogid);
+      console.log(articles.length)
+      if (articles.length === 1) {
+        const { content, title } = parseData(articles[0])
+        this.setState({
+          loading: false,
+          article: articles[0],
+          title: title,
+          content: content
+        });
+      }
     });
   }
 
   render() {
     const {
       title,
-      date,
-      // keywords
-    } = this.state.projectData;
+      date
+    } = this.state.article;
 
     // const keys = String(keywords).split(', ');
 
@@ -136,13 +150,13 @@ class ProjectDetail extends Component {
     }
     return (
       <div style={{ marginTop: '45px' }}>
-        <div className="container-sm" style={{ textAlign: 'justify', alignItems: 'center', maxWidth: '850px' }}>
-          <h2 style={{ textAlign: 'left', margin: '0' }}>
-            {title}
-          </h2>
-          <h3 style={{ textAlign: 'left', margin: '0 0 5px 0' }}>
+        <div className="container-sm" style={{ textAlign: 'left', alignItems: 'center', maxWidth: '850px' }}>
+          <span className="blog-header">
             {this.state.title}
-          </h3>
+          </span>
+          <span className="blog-subheader">
+            {title}
+          </span>
           {this.state.content &&
           <div className="row" style={{ margin: '0 0 0 -15px' }}>
             <div className="col-md-4">
@@ -186,4 +200,4 @@ class ProjectDetail extends Component {
   }
 }
 
-export default ProjectDetail;
+export default BlogDetail;

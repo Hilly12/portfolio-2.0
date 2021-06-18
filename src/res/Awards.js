@@ -24,7 +24,7 @@ const Awards = [
     tip: "Outstanding work in Mathematics"
   },
   {
-    text: "UKSMC Best In Year and British Maths Olympiad Qualifier",
+    text: "UKSMC Best In Year and British Maths Olympiad Participant",
     tip: "1000 highest performers in the UK selected"
   }
 ]

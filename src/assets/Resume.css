@@ -138,7 +138,13 @@ h3 {
 }
 
 .skills .framework {
-  background-color: rgb(170, 40, 140);
+  color: white;
+  background-color: rgb(173, 36, 141);
+}
+
+.skills .framework:hover {
+  background-color: rgb(150, 50, 128);
+  cursor: default;
 }
 
 .organization {
