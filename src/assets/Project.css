@@ -402,3 +402,8 @@
     font-size: 1.2em;
   }
 }
+
+.code {
+  font-family: monospace;
+  margin: 6px 0 6px 0;
+}

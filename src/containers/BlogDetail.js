@@ -5,6 +5,11 @@ import Placeholder from "../components/Placeholder";
 import Image from "../components/Image";
 import Avatar from "@material-ui/core/Avatar";
 import parse from "../util/DateParse";
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import theme from 'react-syntax-highlighter/dist/esm/styles/hljs/atom-one-light';
+
+SyntaxHighlighter.registerLanguage('python', python);
 
 const ttl = 600000; // ms - 10 min
 const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavShxfukNKuTgwBCNc4vhrn6kQjxNMY58bzBfc_tjFbUmg6Y66xApp-P5Wxwxi2hArJLqiZwQIxLywTJdmBNrmUc8-7fxB2C8SgHT-aX6TVQ6VxhGrEU3R5dBNGx4lOGjmUpVrOR=s60";
@@ -16,6 +21,16 @@ const img = (imgSrc, key) => {
              classes="project-image"
              placeholder={<Placeholder/>}
       />
+    </div>
+  )
+}
+
+const code = (text, language, key) => {
+  return (
+    <div className="code" key={key}>
+      <SyntaxHighlighter language={language} style={theme} customStyle={{backgroundColor: "#f3f3f3", borderRadius: "5px"}}>
+        {text}
+      </SyntaxHighlighter>
     </div>
   )
 }
@@ -45,18 +60,19 @@ function visit(node, props = null) {
     children.push(visit(child, { key: key }));
   })
   console.log("visiting " + node.tagName);
+  const key = props ? props.key : null;
   switch (node.tagName) {
     case 'header':
       return children[0];
     case 'body':
       return React.createElement(React.Fragment, props, children);
     case 'img':
-      const key = props ? props.key : null;
       return img(node.getAttribute('src'), key);
     case 'a':
       return <a key={props?.key} href={node.getAttribute('href')}>{children}</a>;
     case 'code':
-      return React.createElement(React.Fragment, props, children);
+      const lang = node.getAttribute('lang')
+      return code(node.innerHTML.trim(), lang ? lang : "bash", key);
     default:
       if (node.tagName) {
         try {

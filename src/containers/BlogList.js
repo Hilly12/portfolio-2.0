@@ -19,8 +19,9 @@ function extractText(data) {
   }
 
   const text = bodyTags[0].textContent;
+  const words = text.split(" ")
 
-  return text.split(" ").slice(0, maxWords).join(" ") + "...";
+  return words.slice(0, maxWords).join(" ") + (maxWords > words.length ? "" : "...");
 }
 
 class BlogList extends Component {
