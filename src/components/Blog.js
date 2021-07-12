@@ -11,10 +11,11 @@ import {faLink} from "@fortawesome/free-solid-svg-icons";
 class Blog extends Component {
   render() {
     const {
-      id, title, date, links, tags, demoSrc
+      title, date, links, tags, demoSrc
     } = this.props.item;
 
     const text = this.props.text;
+    const url = title?.replace(/\s/g, "-").toLowerCase();
 
     const tech = String(tags).split(', ');
     const loading = this.props.loading;
@@ -40,7 +41,7 @@ class Blog extends Component {
           <div className="provider-list-details pos-rel">
             <div className="row">
               <div className="col-md-8">
-                <Link to={`/blog/${id}`} className="cmodule" style={{ fontWeight: "bold", fontSize: "12pt" }}>
+                <Link to={`/blog/${url}`} className="cmodule" style={{ fontWeight: "bold", fontSize: "12pt" }}>
                   {title}
                 </Link>
               </div>

@@ -5,11 +5,10 @@ import Placeholder from "../components/Placeholder";
 import Image from "../components/Image";
 import Avatar from "@material-ui/core/Avatar";
 import parse from "../util/DateParse";
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
-import theme from 'react-syntax-highlighter/dist/esm/styles/hljs/atom-one-light';
-
-SyntaxHighlighter.registerLanguage('python', python);
+import { CodeBlock } from '@atlaskit/code';
+import Code from "../components/Code";
+import CopyButton from "../components/CopyButton";
+import {Table} from "reactstrap";
 
 const ttl = 600000; // ms - 10 min
 const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavShxfukNKuTgwBCNc4vhrn6kQjxNMY58bzBfc_tjFbUmg6Y66xApp-P5Wxwxi2hArJLqiZwQIxLywTJdmBNrmUc8-7fxB2C8SgHT-aX6TVQ6VxhGrEU3R5dBNGx4lOGjmUpVrOR=s60";
@@ -25,12 +24,11 @@ const img = (imgSrc, key) => {
   )
 }
 
-const code = (text, language, key) => {
+const code = (text, language, lined, key) => {
   return (
-    <div className="code" key={key}>
-      <SyntaxHighlighter language={language} style={theme} customStyle={{backgroundColor: "#f3f3f3", borderRadius: "5px"}}>
-        {text}
-      </SyntaxHighlighter>
+    <div className="code-outer" key={key}>
+      <CodeBlock language={language} text={text} showLineNumbers={lined}/>
+      <CopyButton text={text}/>
     </div>
   )
 }
@@ -45,12 +43,13 @@ function parseData(projectData) {
   if (!titleTags[0]) {
     return { title: "", content: "" };
   }
-  console.log(visit(titleTags[0]));
+  // console.log(visit(titleTags[0]));
 
   const bodyTags = tree.getElementsByTagName('body');
   if (!bodyTags[0]) {
     return { title: "", content: "" };
   }
+  console.log(bodyTags[0])
   return { title: visit(titleTags[0]), content: visit(bodyTags[0]) };
 }
 
@@ -59,20 +58,45 @@ function visit(node, props = null) {
   node.childNodes.forEach((child, key) => {
     children.push(visit(child, { key: key }));
   })
-  console.log("visiting " + node.tagName);
+
+  const strictChildren = []
+  if (node.children) {
+    for (let i = 0; i < node.children.length; i++) {
+      strictChildren.push(visit(node.children[i], { key: i }));
+    }
+  }
+  // console.log("visiting " + node.tagName);
   const key = props ? props.key : null;
   switch (node.tagName) {
     case 'header':
-      return children[0];
+      return children.length > 0 ? children[0] : null;
     case 'body':
       return React.createElement(React.Fragment, props, children);
     case 'img':
       return img(node.getAttribute('src'), key);
     case 'a':
-      return <a key={props?.key} href={node.getAttribute('href')}>{children}</a>;
+      return <a key={key} href={node.getAttribute('href')}>{children}</a>;
+    case 'm':
+      return <Code key={key}>{children}</Code>;
+    case 'am':
+      return <Code key={key}><a href={node.getAttribute('href')}>{children}</a></Code>;
     case 'code':
-      const lang = node.getAttribute('lang')
-      return code(node.innerHTML.trim(), lang ? lang : "bash", key);
+      const lang = node.getAttribute('lang');
+      const lined = node.getAttribute('lined');
+      return code(node.innerHTML.trim(), lang ? lang : "java", lined ? lined : true, key);
+    case 'sub':
+      const text = children.toString()
+      return <h2 key={key} id={text.toLowerCase().replace(/\s/g, "-")} className="blog-sub">{text}</h2>
+    case 'li':
+      return <li key={key}>{children}</li>
+    case 'tbl':
+      return <Table key={key} className="blog-table" size="sm" borderless>{strictChildren}</Table>
+    case 'tbody':
+      return <tbody key={key}>{strictChildren}</tbody>
+    case 'tr':
+      return <tr key={key}>{children}</tr>
+    case 'td':
+      return <td key={key}>{children}</td>
     default:
       if (node.tagName) {
         try {
@@ -107,11 +131,14 @@ class BlogDetail extends Component {
     window.scroll(0, 0);
 
     let { blogid } = this.props.match.params;
+    blogid = blogid.toString();
     
     let articlePayload = JSON.parse(localStorage.getItem('articles'));
-    if (articlePayload && articlePayload.expiry > Date.now()) {
-      let articles = articlePayload.data.filter(a => a.id.toString() === blogid);
-      if (articles.length === 1) {
+    if (articlePayload && articlePayload.expiry > Date.now() && false) {
+      let articles = articlePayload.data.filter(a => a.title.replace(/\s/g, "-").toLowerCase() === blogid.toLowerCase());
+      if (articles.length === 0)
+        articles = articlePayload.data.filter(a => a.id.toString() === blogid);
+      if (articles.length > 0) {
         const { content, title } = parseData(articles[0])
         this.setState({
           loading: false,
@@ -134,9 +161,10 @@ class BlogDetail extends Component {
         expiry: Date.now() + ttl
       }
       localStorage.setItem('articles', JSON.stringify(payload));
-      let articles = response.data.filter(a => a.id.toString() === blogid);
-      console.log(articles.length)
-      if (articles.length === 1) {
+      let articles = response.data.filter(a => a.title.replace(/\s/g, "-").toLowerCase() === blogid.toLowerCase());
+      if (articles.length === 0)
+        articles = response.data.filter(a => a.id.toString() === blogid);
+      if (articles.length > 0) {
         const { content, title } = parseData(articles[0])
         this.setState({
           loading: false,

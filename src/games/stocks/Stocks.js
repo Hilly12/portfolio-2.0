@@ -330,6 +330,7 @@ class Stocks extends Component {
     const lastPage = Math.ceil(this.state.stocks.length / 50);
     const min = Math.max(Math.min(Math.max(0, this.state.page - 2), lastPage - 5), 0);
     const max = Math.min(lastPage, min + 5);
+
     return (
       <Fragment>
         <div className="container" style={{ minHeight: "100vh" }}>
@@ -364,6 +365,9 @@ class Stocks extends Component {
             <Placeholder classes="landing-placeholder" margin="15% auto auto"/> :
             <div className="classes group">
               <Fragment>
+                <Alert color="danger" isOpen={stocks !== null && stocks.length === 0}>
+                  Blocked by Yahoo, temporarily unavailabe :(
+                </Alert>
                 <div className="table-overflow">
                   <Table style={{ textAlign: "left" }}>
                     <thead>

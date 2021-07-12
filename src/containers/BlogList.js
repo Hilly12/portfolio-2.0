@@ -79,7 +79,7 @@ class BlogList extends Component {
           //   pageSize: 8,
           //   responsive: "true",
           // }}
-          dataSource={this.state.articles}
+          dataSource={this.state.articles.filter(a => a.id !== 1)}
           renderItem={(item) => (
             <Blog item={item} loading={this.state.loading} text={extractText(item)}/>
           )}

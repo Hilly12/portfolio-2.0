@@ -8,7 +8,7 @@ import Image from "../components/Image";
 
 const cards = [
   {
-    title: "Stock Analysis",
+    title: "Stock Dashboard",
     description: "Analysis of stocks from indexes",
     img: "https://lh3.googleusercontent.com/pw/ACtC-3cz2cDxxogDS0UDCnWD_rUsN4YPzlkp9RswX1bzliCqzaKz0WS9XZwvxQM4S5ztWpY22R7o42WWa6HMVVjVQKGTuZTDuTTdwR42FZ4yOBmElti7Ud0tu_ioKgvCBqh09SqQA7bQqwoIf4i65xTxe1hA=w720-h405",
     link: "sandbox/stocks",
