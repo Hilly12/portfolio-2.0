@@ -52,7 +52,7 @@ const languageDetails = [
 const languageExtra = ['Haskell', 'Kotlin', 'Go', 'SQL', 'Bash', '...'];
 
 const frameworks = [
-  'Tensorflow', 'Python Data Tools', 'PyTorch', 'Keras', 'Django', 'Flask', 'ExpressJS',
+  'PyData Stack', 'Tensorflow', 'PyTorch', 'Keras', 'Django', 'Flask', 'ExpressJS',
   'Postgres', 'MongoDB', 'Unity', 'React', '.NET', 'Android Development'
 ];
 

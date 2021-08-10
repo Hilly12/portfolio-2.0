@@ -5,9 +5,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCrown} from "@fortawesome/free-solid-svg-icons/faCrown";
 import Image from "./Image";
 import Placeholder from "./Placeholder";
-import {faClock} from "@fortawesome/free-solid-svg-icons/faClock";
-import {faUsers} from "@fortawesome/free-solid-svg-icons/faUsers";
-import {faUser} from "@fortawesome/free-solid-svg-icons/faUser";
 import {faPlay} from "@fortawesome/free-solid-svg-icons/faPlay";
 import {faCommentAlt} from "@fortawesome/free-solid-svg-icons/faCommentAlt";
 import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
@@ -17,7 +14,7 @@ import {faLink} from "@fortawesome/free-solid-svg-icons";
 class Project extends Component {
   render() {
     const {
-      id, title, imgSrc, pretext, timespan, date, teamSize, links, technologies, keywords, demoSrc, award, article
+      id, title, imgSrc, pretext, date, links, technologies, keywords, demoSrc, award, article
     } = this.props.item;
 
     const tech = String(technologies).split(', ');
@@ -74,7 +71,7 @@ class Project extends Component {
                   )
                 })}
                 <p className="details-row descPart loud">{pretext}</p>
-                <div className="row text-nowrap text-muted" style={{ marginBottom: '5px' }}>
+                {/* <div className="row text-nowrap text-muted" style={{ marginBottom: '5px' }}>
                   <div className="col-md-3">
                     <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '18px' }} icon={faClock}/> {' '}
                     {timespan}
@@ -82,9 +79,9 @@ class Project extends Component {
                   <div className="col-md-3">
                     <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '18px' }}
                                      icon={teamSize === 1 ? faUser : faUsers}/> {' '}
-                    {teamSize === 1 ? 'Individual' : `${teamSize} people`}
+                    {teamSize === 1 ? 'Individual' : (teamSize === 0 ? 'Open' : `${teamSize} people`)}
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="col-md-2 project-left">
                 {demoSrc !== '-' &&

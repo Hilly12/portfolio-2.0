@@ -378,11 +378,11 @@
 
 .blog-sub {
   font-size: 1.4em;
-  margin: 25px 0 20px 0;
+  margin: 40px 0 15px 0;
 }
 
 .blog-content {
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
 }
 
@@ -390,7 +390,7 @@
   text-align: left;
   padding-top: 5px;
   margin: 5px 0 10px 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 @media (min-width: 586px) {
@@ -414,6 +414,10 @@
 
   .blog-subheader {
     font-size: 1.2em;
+  }
+
+  .prismjs {
+    font-size: 13px !important;
   }
 }
 
@@ -447,12 +451,8 @@
 }
 
 .code-outer {
-  margin: 12px 0 12px 0;
+  margin: 20px 0 20px 0;
   position: relative;
-}
-
-.syntaxhighliter table tbody tr .code code.string {
-  font-size: 12pt !important;
 }
 
 .popper {

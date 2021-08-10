@@ -1,9 +1,26 @@
 const Projects = [
     {
+        "id": 13,
+        "title": "FairLens",
+        "imgSrc": "https://lh3.googleusercontent.com/pw/AM-JKLXNiy3vIF9zWBKAnNrxK8ZqPjDCSFSE9dBMQexGy7cdNnIrGmBOLN10OEIkhNYt9itVSdvRZow_XqrVCjXuKkwMSIzs9zx8Wxx2MP4ilvhEKimVnStCPzw6nKJB3IGXw9wI04MPcspw7_bWlpQfsEtqig=w1067-h600-no",
+        "pretext": "An open source project built to assess fairness in machine learning models and datasets.",
+        "timespan": "6 months",
+        "date": "2021-08-06",
+        "teamSize": 0,
+        "links": "{\"git\": \"https://github.com/synthesized-io/fairlens\"}",
+        "technologies": "Python, PyData Stack",
+        "keywords": "Fairness, Bias, Machine Learning",
+        "demoSrc": "-",
+        "award": "-",
+        "article": false,
+        "featured": false,
+        "content": "..."
+    },
+    {
         "id": 6,
         "title": "IC ARM Project",
         "imgSrc": "https://lh3.googleusercontent.com/pw/ACtC-3ezjy4A7F_wd8G8i4wi5ZVQCBuymaVKL0hNKr1OSaFPQh8Rg-mBh3PsBteqDHV47_9LocfX0zcjS3thlInGoZt_ohnT-nByo_jGscQAI6_tdkvTdVilU5zWYtyJpiR6iWW2WoPpTe7d1nE4aAHyYsJw=w1677-h943-no",
-        "pretext": "Designed and implemented an ARM11 emulator and assembler in C. As part of an extension, created an RPI OS kernel capable of rendering graphics with no external libraries, a lightweight MVC and graphics library, and an animated game with dynamic map generation.",
+        "pretext": "An ARM11 emulator and assembler in C for a school project. Extended to, create an RPI OS kernel capable of rendering graphics with no external libraries, a lightweight MVC and graphics library, and an animated game with dynamic map generation.",
         "timespan": "4 weeks",
         "date": "2019-06-21",
         "teamSize": 4,
