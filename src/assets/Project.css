@@ -377,8 +377,8 @@
 }
 
 .blog-sub {
-  font-size: 20px;
-  margin: 25px 0 10px 0;
+  font-size: 1.4em;
+  margin: 25px 0 20px 0;
 }
 
 .blog-content {
@@ -390,7 +390,7 @@
   text-align: left;
   padding-top: 5px;
   margin: 5px 0 10px 0;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media (min-width: 586px) {
@@ -400,7 +400,7 @@
   }
 
   .blog-table {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .blog-h {
@@ -415,11 +415,6 @@
   .blog-subheader {
     font-size: 1.2em;
   }
-}
-
-.code-outer {
-  margin: 10px 0 10px 0;
-  position: relative;
 }
 
 .btn-tp {
@@ -452,7 +447,12 @@
 }
 
 .code-outer {
-  margin: 10px 0 10px 0;
+  margin: 12px 0 12px 0;
+  position: relative;
+}
+
+.syntaxhighliter table tbody tr .code code.string {
+  font-size: 12pt !important;
 }
 
 .popper {

@@ -3,12 +3,15 @@ const workexp = [
     title: "Machine Learning Engineer Intern",
     institution: "Synthesized",
     period: "April 2021 - Present",
-    description: [],
+    description: [
+      "Developed an open source project to measure fairness and mitigate bias in machine learning models and datasets.",
+      "Researched and implemented multiple tests and metrics to measure statistical similarity, correlations.",
+    ],
   },
   {
     title: "Teaching Assistant CO120.X",
     institution: "Imperial College London",
-    period: "October 2020 - March 2021",
+    period: "October 2019 - March 2021",
     description: [
       "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
       "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
@@ -20,11 +23,9 @@ const workexp = [
     institution: "Augnito",
     period: "July 2020 - September 2020",
     description: [
-      "Carried out research on NLU engines, evaluating different word embeddings, pipelines and frameworks.",
       "Developed an MVP for a contextual sales bot in Python.",
-      "Additionally worked on adding features to a medical transcription application.",
-      "Implemented features including voice commands for selection and formatting, voice enabled RTF macros.",
-      "Attended the Voice Tech Summit India Conference to learn about innovative ideas in NLU."
+      "Carried out research on NLU engines, evaluating different word embeddings, pipelines and frameworks.",
+      "Additionally worked on adding voice enabled features to a medical transcription application."
     ],
   },
   // {
