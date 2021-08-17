@@ -4,14 +4,16 @@ const workexp = [
     institution: "Synthesized",
     period: "April 2021 - Present",
     description: [
-      "Developed an open source project to measure fairness and mitigate bias in machine learning models and datasets.",
-      "Researched and implemented multiple tests and metrics to measure statistical similarity, correlations.",
+      "Developed and open sourced a library to assess fairness in machine learning models and datasets.",
+      "Implemented tools to measure and mitigate bias in datasets, carry out numerical and analytical hypothesis " +
+      "tests for similarity metrics, detect sensitive semantic types and hidden correlations, and to visualize biases.",
+      "Additionally worked on creating a documentation with detailed tutorials and user guides."
     ],
   },
   {
     title: "Teaching Assistant CO120.X",
     institution: "Imperial College London",
-    period: "October 2019 - March 2021",
+    period: "October 2019 - Present",
     description: [
       "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
       "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
@@ -34,7 +36,7 @@ const workexp = [
   //   institution: "Self Employed",
   //   description: [
   //     "Worked on several short term projects involving prototyping and web development using primitive web technologies.",
-  //     "Taught beginners Java, Python and web development online.",
+  //     "Taught beginners Java, Python and web development.",
   //   ]
   // },
   // {
@@ -56,19 +58,18 @@ const education = [
     period: "October 2018 - Present",
     description: [
       "On track for a first class honors",
-      "86% average in Programming I, II, III",
-      "72% average in Algorithms modules",
-      "87% in compilers"
+      "86% average in Programming modules",
+      "72% average in Algorithms modules"
     ],
   },
   {
-    title: "Secondary School",
+    title: "Secondary School (A-Levels)",
     institution: "Blundell's School",
     period: "September 2015 - July 2018",
     description: [
-      "A Levels: A*AAAA in Maths, Further Maths, Computing, Physics, Chemistry",
-      "Vice Chair of International Committee - lead and participated in multiple social, cultural and charitable events",
-      "Chair of the E-Safety Committee - promoted web safety and helped IT regulate blocked sites",
+      "A*AAAAA in Maths, Further Maths, Computing, Physics, Chemistry, EPQ",
+      "Vice Chair of International Committee - lead multiple social, cultural and charitable events",
+      "Chair of the E-Safety Committee - promoted web safety",
       "Grade 8 Public Speaking with Distinction",
     ],
   },
