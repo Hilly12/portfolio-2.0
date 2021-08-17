@@ -65,7 +65,7 @@ const education = [
   {
     title: "Secondary School (A-Levels)",
     institution: "Blundell's School",
-    period: "September 2015 - July 2018",
+    period: "September 2016 - July 2018",
     description: [
       "A*AAAAA in Maths, Further Maths, Computing, Physics, Chemistry, EPQ",
       "Vice Chair of International Committee - lead multiple social, cultural and charitable events",
