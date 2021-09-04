@@ -4,10 +4,11 @@ const workexp = [
     institution: "Synthesized",
     period: "April 2021 - Present",
     description: [
-      "Developed and open sourced a library to assess fairness in machine learning models and datasets.",
-      "Implemented tools to measure and mitigate bias in datasets, carry out numerical and analytical hypothesis " +
-      "tests for similarity metrics, detect sensitive semantic types and hidden correlations, and to visualize biases.",
-      "Additionally worked on creating a documentation with detailed tutorials and user guides."
+      "Carried out research on measuring and mitigating bias in datasets and detecting proxies for sensitive columns.",
+      "Co-lead the development of a Python library to automatically assess fairness in machine learning models and " + 
+      "datasets.",
+      "Additionally worked on open sourcing the library, creating a documentation with detailed tutorials and user " +
+      "guides."
     ],
   },
   {

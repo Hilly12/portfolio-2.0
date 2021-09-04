@@ -382,25 +382,20 @@
 }
 
 .blog-content {
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
 .blog-table {
   text-align: left;
   padding-top: 5px;
-  margin: 5px 0 10px 0;
-  font-size: 14px;
+  margin: 10px 0 10px 0;
 }
 
 @media (min-width: 586px) {
   .blog-content {
-    font-size: 16px;
+    font-size: 15px;
     text-align: justify;
-  }
-
-  .blog-table {
-    font-size: 16px;
   }
 
   .blog-h {

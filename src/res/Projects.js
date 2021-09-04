@@ -156,7 +156,7 @@ const Projects = [
         "id": 12,
         "title": "Stock Dashboard",
         "imgSrc": "https://lh3.googleusercontent.com/pw/ACtC-3cz2cDxxogDS0UDCnWD_rUsN4YPzlkp9RswX1bzliCqzaKz0WS9XZwvxQM4S5ztWpY22R7o42WWa6HMVVjVQKGTuZTDuTTdwR42FZ4yOBmElti7Ud0tu_ioKgvCBqh09SqQA7bQqwoIf4i65xTxe1hA=w720-h405",
-        "pretext": "A dashboard for analyzing stocks from popular indexes such as S&P 500, FTSE 100, NIFTY 50, on quantitative value metrics. Backed by an API serving financial data regularly extracted from Yahoo Finance.",
+        "pretext": "A dashboard for analyzing stocks from popular indexes such as S&P 500, FTSE 100, NIFTY 50, based on quantitative value indicators. Backed by an API serving financial data regularly extracted from Yahoo Finance.",
         "timespan": "3 weeks",
         "date": "2021-01-21",
         "teamSize": 1,

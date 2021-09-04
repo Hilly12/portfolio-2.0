@@ -13,12 +13,12 @@ function extractText(data) {
   let domParser = new DOMParser();
   const tree = domParser.parseFromString(content, "text/xml");
 
-  const bodyTags = tree.getElementsByTagName('body');
+  const bodyTags = tree.getElementsByTagName("body");
   if (!bodyTags[0]) {
     return "";
   }
 
-  const text = bodyTags[0].textContent;
+  const text = bodyTags[0].textContent.replace(/\s\s+/g, " ")
   const words = text.split(" ")
 
   return words.slice(0, maxWords).join(" ") + (maxWords > words.length ? "" : "...");

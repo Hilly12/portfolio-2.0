@@ -11,10 +11,10 @@ import {faLink} from "@fortawesome/free-solid-svg-icons";
 class Blog extends Component {
   render() {
     const {
-      title, date, links, tags, demoSrc
+      title, date, links, tags, pretext, demoSrc
     } = this.props.item;
 
-    const text = this.props.text;
+    const text = pretext === "-" ? this.props.text : pretext;
     const url = title?.replace(/\s/g, "-").toLowerCase();
 
     const tech = String(tags).split(', ');
