@@ -82,7 +82,8 @@ function visit(node, props = null) {
     case 'code':
       const lang = node.getAttribute('lang');
       const lined = node.getAttribute('lined');
-      const lines = node.innerHTML.split("\n").filter(l => l.trim() !== "");
+      const html = (node.children.length > 0 && node.children[0].tagName === "pre") ? node.children[0].innerHTML : node.innerHTML;
+      const lines = html.split("\n").filter(l => l.trim() !== "");
       const leadingSpaces = lines[0].length - lines[0].replace(/^\s+/gm, '').length;
       const txt = lines.map(l => l.slice(leadingSpaces)).join("\n");
       return code(txt, lang ? lang : "java", lined ? lined === "true" : true, key);
