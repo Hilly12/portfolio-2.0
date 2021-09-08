@@ -392,6 +392,10 @@
   margin: 10px 0 10px 0;
 }
 
+.prismjs {
+  background-color: rgb(240, 241, 243) !important;
+}
+
 @media (min-width: 586px) {
   .blog-content {
     font-size: 15px;
@@ -437,7 +441,7 @@
 }
 
 .code {
-  background: #f2f2f5;
+  background-color: rgb(240, 241, 243);
   color: black;
   word-wrap: break-word;
   box-decoration-break: clone;

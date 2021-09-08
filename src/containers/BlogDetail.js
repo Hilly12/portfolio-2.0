@@ -7,7 +7,6 @@ import Avatar from "@material-ui/core/Avatar";
 import parse from "../util/DateParse";
 import { CodeBlock } from '@atlaskit/code';
 import Code from "../components/Code";
-import CopyButton from "../components/CopyButton";
 import {Table} from "reactstrap";
 
 const ttl = 600000; // ms - 10 min
@@ -28,7 +27,7 @@ const code = (text, language, lined, key) => {
   return (
     <div className="code-outer" key={key}>
       <CodeBlock language={language} text={text} showLineNumbers={lined}/>
-      <CopyButton text={text}/>
+      {/* <CopyButton text={text}/> */}
     </div>
   )
 }
@@ -49,7 +48,7 @@ function parseData(projectData) {
   if (!bodyTags[0]) {
     return { title: "", content: "" };
   }
-  console.log(bodyTags[0])
+
   return { title: visit(titleTags[0]), content: visit(bodyTags[0]) };
 }
 
@@ -83,10 +82,13 @@ function visit(node, props = null) {
     case 'code':
       const lang = node.getAttribute('lang');
       const lined = node.getAttribute('lined');
-      return code(node.innerHTML.trim(), lang ? lang : "java", lined ? lined : true, key);
+      const lines = node.innerHTML.split("\n").filter(l => l.trim() !== "");
+      const leadingSpaces = lines[0].length - lines[0].replace(/^\s+/gm, '').length;
+      const txt = lines.map(l => l.slice(leadingSpaces)).join("\n");
+      return code(txt, lang ? lang : "java", lined ? lined === "true" : true, key);
     case 'sub':
-      const text = children.toString()
-      return <h2 key={key} id={text.toLowerCase().replace(/\s/g, "-")} className="blog-sub">{text}</h2>
+      const s = children.toString()
+      return <h2 key={key} id={s.toLowerCase().replace(/\s/g, "-")} className="blog-sub">{s}</h2>
     case 'li':
       return <li key={key}>{children}</li>
     case 'tbl':
@@ -94,7 +96,7 @@ function visit(node, props = null) {
     case 'tbody':
       return <tbody key={key}>{strictChildren}</tbody>
     case 'tr':
-      return <tr key={key}>{children}</tr>
+      return <tr key={key}>{strictChildren}</tr>
     case 'td':
       return <td key={key}>{children}</td>
     default:
