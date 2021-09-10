@@ -8,6 +8,7 @@ import parse from "../util/DateParse";
 import { CodeBlock } from '@atlaskit/code';
 import Code from "../components/Code";
 import {Table} from "reactstrap";
+import CopyButton from "../components/CopyButton"
 
 const ttl = 600000; // ms - 10 min
 const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavShxfukNKuTgwBCNc4vhrn6kQjxNMY58bzBfc_tjFbUmg6Y66xApp-P5Wxwxi2hArJLqiZwQIxLywTJdmBNrmUc8-7fxB2C8SgHT-aX6TVQ6VxhGrEU3R5dBNGx4lOGjmUpVrOR=s60";
@@ -27,7 +28,7 @@ const code = (text, language, lined, key) => {
   return (
     <div className="code-outer" key={key}>
       <CodeBlock language={language} text={text} showLineNumbers={lined}/>
-      {/* <CopyButton text={text}/> */}
+      <CopyButton text={text}/>
     </div>
   )
 }
@@ -83,7 +84,16 @@ function visit(node, props = null) {
       const lang = node.getAttribute('lang');
       const lined = node.getAttribute('lined');
       const html = (node.children.length > 0 && node.children[0].tagName === "pre") ? node.children[0].innerHTML : node.innerHTML;
-      const lines = html.split("\n").filter(l => l.trim() !== "");
+      let lines = html.split("\n")
+      let startIndex, finishIndex;
+      for (startIndex = 0; startIndex < lines.length; startIndex++)
+        if (lines[startIndex].trim() !== "")
+          break;
+      for (finishIndex = lines.length - 1; finishIndex >= 0; finishIndex--)
+        if (lines[finishIndex].trim() !== "")
+          break;
+
+      lines = lines.slice(startIndex, finishIndex + 1);
       const leadingSpaces = lines[0].length - lines[0].replace(/^\s+/gm, '').length;
       const txt = lines.map(l => l.slice(leadingSpaces)).join("\n");
       return code(txt, lang ? lang : "java", lined ? lined === "true" : true, key);

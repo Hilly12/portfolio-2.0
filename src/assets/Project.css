@@ -430,7 +430,7 @@
 }
 
 .btn-tp:hover {
-  color: rgb(80, 80, 80);
+  /* color: rgb(80, 80, 80); */
   background-color: transparent;
 }
 
@@ -438,6 +438,20 @@
   background-color: transparent;
   outline: 0;
   box-shadow: none;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.4s;
+}
+
+.ripple:hover {
+  background: #94999c44;
+}
+
+.ripple:active {
+  background-color: #94999caa;
+  transition: background 0s;
 }
 
 .code {
