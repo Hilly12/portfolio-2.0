@@ -276,8 +276,8 @@
 
 .project-image-holder {
   /*margin: 0 -15px;*/
-  margin: 10px 0;
-  /*padding-top: 56.25%;*/
+  margin: 10px 0 20px 0;
+  /* padding-top: 56.25%; */
 }
 
 .project-image {
@@ -378,7 +378,8 @@
 
 .blog-sub {
   font-size: 1.4em;
-  margin: 40px 0 15px 0;
+  margin: -60px 0 15px 0;
+  padding-top: 100px;
 }
 
 .blog-content {
@@ -470,4 +471,24 @@
 
 .popper {
   background-color: thistle !important;
+}
+
+.toc {
+  font-size: small;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.toc li {
+  list-style-position: outside;
+  color: #494c4e;
+}
+
+.toc li a {
+  position: relative;
+  left: -4px;
+}
+
+.toc-text {
+  padding-left: -20px;
 }

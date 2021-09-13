@@ -16,10 +16,7 @@ const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavSh
 const img = (imgSrc, key) => {
   return (
     <div key={key} className="project-image-holder">
-      <Image src={imgSrc}// {cdn.baseURL + cdn.ImgURL + cdn.ImgDir + imgSrc}
-             classes="project-image"
-             placeholder={<Placeholder/>}
-      />
+      <Image src={imgSrc} classes="project-image" placeholder={<Placeholder/>}/>
     </div>
   )
 }
@@ -39,30 +36,40 @@ function parseData(projectData) {
   let domParser = new DOMParser();
   const tree = domParser.parseFromString(content, "text/xml");
 
-  const titleTags = tree.getElementsByTagName('header');
+  const titleTags = tree.getElementsByTagName("header");
   if (!titleTags[0]) {
     return { title: "", content: "" };
   }
   // console.log(visit(titleTags[0]));
 
-  const bodyTags = tree.getElementsByTagName('body');
+  const bodyTags = tree.getElementsByTagName("body");
   if (!bodyTags[0]) {
-    return { title: "", content: "" };
+    return { title: "", content: "", toc: [] };
   }
 
-  return { title: visit(titleTags[0]), content: visit(bodyTags[0]) };
+  const toc = [];
+  
+  Array.from(tree.getElementsByTagName("sub")).forEach(subTag => {
+    const children = [];
+    subTag.childNodes.forEach((child, key) => {
+      children.push(visit(child, { key: key }));
+    })
+    toc.push(children.toString())
+  });
+
+  return { title: visit(titleTags[0]), content: visit(bodyTags[0], toc) };
 }
 
-function visit(node, props = null) {
+function visit(node, toc = null, props = null) {
   const children = [];
   node.childNodes.forEach((child, key) => {
-    children.push(visit(child, { key: key }));
+    children.push(visit(child, toc, { key: key }));
   })
 
   const strictChildren = []
   if (node.children) {
     for (let i = 0; i < node.children.length; i++) {
-      strictChildren.push(visit(node.children[i], { key: i }));
+      strictChildren.push(visit(node.children[i], toc, { key: i }));
     }
   }
   // console.log("visiting " + node.tagName);
@@ -110,6 +117,19 @@ function visit(node, props = null) {
       return <tr key={key}>{strictChildren}</tr>
     case 'td':
       return <td key={key}>{children}</td>
+    case 'toc':
+      return (
+        <div className="row toc-wrapper">
+          <div className="col-md-3">
+            <span>Table of Contents</span>
+            <br/>
+            {toc && generateTOC(toc)}
+          </div>
+          <div className="col-md-9 blog-content">
+            {children}
+          </div>
+        </div>
+      )
     default:
       if (node.tagName) {
         try {
@@ -121,6 +141,16 @@ function visit(node, props = null) {
       return node.nodeValue;
   }
 }
+
+function generateTOC(toc) {
+  return (
+    <ul className="toc">
+      {toc.map((item, key) => {
+        return <li key={key}><a href={`#${item.toLowerCase().replace(/\s/g, "-")}`}>{item}</a></li>
+      })}
+    </ul>
+  )
+} 
 
 class BlogDetail extends Component {
   constructor(props) {
@@ -214,7 +244,6 @@ class BlogDetail extends Component {
           <span className="blog-subheader">
             {title}
           </span>
-          {this.state.content &&
           <div className="row" style={{ margin: '0 0 0 -15px' }}>
             <div className="col-md-4">
               <div style={{ display: 'flex', margin: '10px 0' }}>
@@ -243,7 +272,6 @@ class BlogDetail extends Component {
             {/*  </div>*/}
             {/*</div>*/}
           </div>
-          }
           <br className="noselect"/>
           <div className="blog-content">
             {this.state.content}
