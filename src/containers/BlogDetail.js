@@ -177,7 +177,7 @@ class BlogDetail extends Component {
     blogid = blogid.toString();
     
     let articlePayload = JSON.parse(localStorage.getItem('articles'));
-    if (articlePayload && articlePayload.expiry > Date.now() && false) {
+    if (articlePayload && articlePayload.expiry > Date.now()) {
       let articles = articlePayload.data.filter(a => a.title.replace(/\s/g, "-").toLowerCase() === blogid.toLowerCase());
       if (articles.length === 0)
         articles = articlePayload.data.filter(a => a.id.toString() === blogid);
