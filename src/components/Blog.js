@@ -70,18 +70,11 @@ class Blog extends Component {
                   <br className="noselect"/>
                 </Fragment>
                 }
-                {linksP &&
+                {git &&
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  {git ?
-                    <button style={{ fontSize: '13px', padding: '2px' }}
-                            className="btn btn-git"
-                    >
-                      <FontAwesomeIcon size="lg" style={{ paddingTop: '1px', minWidth: '20px' }} icon={faGithub}/>
-                    </button> :
-                    <button style={{ fontSize: '13px', padding: '2px' }}
-                            className="btn btn-info">
-                      <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faLink}/>
-                    </button>}
+                  <button style={{ fontSize: '13px', padding: '2px' }} className="btn btn-git">
+                    <FontAwesomeIcon size="lg" style={{ paddingTop: '1px', minWidth: '20px' }} icon={faGithub}/>
+                  </button>
                 </a>
                 }
               </div>
