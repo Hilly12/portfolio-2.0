@@ -276,7 +276,7 @@
 
 .project-image-holder {
   /*margin: 0 -15px;*/
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
   /* padding-top: 56.25%; */
 }
 
@@ -284,7 +284,6 @@
   display: block;
   margin: auto;
   max-width: 100%;
-  /* max-width: 100%; */
 }
 
 .my-avatar {
@@ -393,8 +392,34 @@
   margin: 10px 0 10px 0;
 }
 
+.blog-grid {
+  margin: 10px 0 10px 0;
+}
+
+.blog-row {
+  padding: 5px;
+}
+
 .prismjs {
   background-color: rgb(240, 241, 243) !important;
+}
+
+.blog-col code {
+  margin-left: -5px;
+}
+
+.blog-col {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .blog-col code {
+    margin-left: inherit;
+  }
+
+  .blog-col {
+    margin-bottom: inherit;
+  }
 }
 
 @media (min-width: 586px) {

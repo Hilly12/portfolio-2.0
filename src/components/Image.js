@@ -26,6 +26,7 @@ class Image extends React.Component {
       visibility: 'hidden',
       position: 'absolute',
       opacity: '0',
+      maxWidth: '0%',
       objectFit: 'cover',
       transition: transition
     } : { visibility: 'visible', opacity: '1', transition: transition, objectFit: 'cover' };

@@ -36,6 +36,7 @@ class ResumePage extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
+    document.title = "Resume"
   }
 
   OnLoaded() {

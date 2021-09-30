@@ -5,6 +5,11 @@ import BlogList from "../containers/BlogList"
 import BlogDetail from "../containers/BlogDetail"
 
 class BlogPage extends Component {
+
+  componentDidMount() {
+    document.title = "Blog"
+  }
+
   render() {
     return (
       <Fragment>

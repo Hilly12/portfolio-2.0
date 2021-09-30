@@ -17,11 +17,8 @@ class Header extends Component {
 
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleClose = this.toggleClose.bind(this);
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.state = {
-      isOpen: false,
-      width: 0,
-      height: 0
+      isOpen: false
     };
   }
 
@@ -36,20 +33,6 @@ class Header extends Component {
       isOpen: false,
     });
   }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-
 
   render() {
     return (

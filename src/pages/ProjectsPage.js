@@ -3,6 +3,11 @@ import Footer from "../components/Footer";
 import ProjectList from "../containers/ProjectList";
 
 class ProjectsPage extends Component {
+
+  componentDidMount() {
+    document.title = "Projects"
+  }
+
   render() {
     return (
       <Fragment>

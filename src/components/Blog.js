@@ -6,7 +6,7 @@ import {faPlay} from "@fortawesome/free-solid-svg-icons/faPlay";
 // import {faCommentAlt} from "@fortawesome/free-solid-svg-icons/faCommentAlt";
 import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import parse from "../util/DateParse";
-import {faLink} from "@fortawesome/free-solid-svg-icons";
+// import {faLink} from "@fortawesome/free-solid-svg-icons";
 
 class Blog extends Component {
   render() {

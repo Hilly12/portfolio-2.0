@@ -111,15 +111,21 @@ function visit(node, toc = null, props = null) {
       return <li key={key}>{children}</li>
     case 'tbl':
       return <Table key={key} className="blog-table" size="sm" borderless>{strictChildren}</Table>
+    case 'grid':
+      return <div key={key} className="blog-grid">{children}</div>
+    case 'row':
+      return <div key={key} className="row blog-row">{children}</div>
+    case 'item':
+      return <div key={key} className="col-md blog-col">{children}</div>
     case 'tbody':
-      return <tbody key={key}>{strictChildren}</tbody>
+      return <tbody style={{overflowX: "auto"}} key={key}>{strictChildren}</tbody>
     case 'tr':
       return <tr key={key}>{strictChildren}</tr>
     case 'td':
       return <td key={key}>{children}</td>
     case 'toc':
       return (
-        <div className="row toc-wrapper">
+        <div key={key} className="row toc-wrapper">
           <div className="col-md-3">
             <span>Table of Contents</span>
             <br/>
@@ -192,6 +198,14 @@ class BlogDetail extends Component {
       }
     } else {
       setTimeout(this.fetch, 300);
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.state.title) {
+      if (document.title !== this.state.article.title) {
+        document.title = this.state.article.title;
+      }
     }
   }
 

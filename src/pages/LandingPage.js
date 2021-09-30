@@ -36,6 +36,7 @@ class LandingPage extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
+    document.title = "Aahil Mehta"
   }
 
   OnLoaded() {
