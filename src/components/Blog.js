@@ -11,11 +11,13 @@ import parse from "../util/DateParse";
 class Blog extends Component {
   render() {
     const {
-      title, date, links, tags, pretext, demoSrc
+      title, date, links, tags, pretext, demoSrc, external
     } = this.props.item;
 
     const text = pretext === "-" ? this.props.text : pretext;
     const url = title?.replace(/\s/g, "-").toLowerCase();
+    const blogLink = external ? { pathname: demoSrc } : `/blog/${url}`;
+    const blogLinkTarget = external ? "_blank" : "_self";
 
     const tech = String(tags).split(', ');
     const loading = this.props.loading;
@@ -41,7 +43,8 @@ class Blog extends Component {
           <div className="provider-list-details pos-rel">
             <div className="row">
               <div className="col-md-8">
-                <Link to={`/blog/${url}`} className="cmodule" style={{ fontWeight: "bold", fontSize: "12pt" }}>
+                <Link to={blogLink} className="cmodule" target={blogLinkTarget}
+                  style={{ fontWeight: "bold", fontSize: "12pt" }}>
                   {title}
                 </Link>
               </div>
@@ -59,7 +62,7 @@ class Blog extends Component {
                 <p className="details-row descPart loud">{text}</p>
               </div>
               <div className="col-md-2 project-left">
-                {demoSrc !== '-' &&
+                {!external && demoSrc !== '-' &&
                 <Fragment>
                   <Link to={`${demoSrc}`}>
                     <button style={{ fontSize: '13px', padding: '2px' }}
