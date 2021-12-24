@@ -12,7 +12,7 @@ const Projects = [
         "keywords": "Fairness, Machine Learning",
         "demoSrc": "-",
         "award": "-",
-        "article": false,
+        "article": true,
         "featured": false,
         "content": "..."
     },

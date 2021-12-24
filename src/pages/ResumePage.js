@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from "react";
 import Footer from "../components/Footer";
 import "../assets/Resume.css";
-import {Table} from "reactstrap";
+// import {Table} from "reactstrap";
 import CustomTooltip from "../components/CustomTooltip";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faClock as pendingIcon} from "@fortawesome/free-solid-svg-icons/faClock";
-import {faCheckCircle as completedIcon} from "@fortawesome/free-solid-svg-icons/faCheckCircle"
+// import {faClock as pendingIcon} from "@fortawesome/free-solid-svg-icons/faClock";
+// import {faCheckCircle as completedIcon} from "@fortawesome/free-solid-svg-icons/faCheckCircle"
 import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
 import Avatar from "@material-ui/core/Avatar";
 import {faFacebookF} from "@fortawesome/free-brands-svg-icons/faFacebookF";
@@ -13,10 +13,11 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import {faFileAlt} from "@fortawesome/free-solid-svg-icons/faFileAlt";
 import Placeholder from "../components/Placeholder";
 import MyData from "../res/MyData";
+// import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
 
 const {
   workexp, languages, frameworks,
-  education, awards, modules, links
+  education, awards, /* modules, links */
 } = MyData
 
 class ResumePage extends Component {
@@ -66,7 +67,7 @@ class ResumePage extends Component {
             transition: 'visibility 0s, opacity 0.65s ease-in-out'
           }}>
             {/* Bio */}
-            <div className="bio group" style={{ marginTop: '30px' }}>
+            <div className="bio group" style={{ marginTop: '30px', marginBottom: '10px'}}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img className="brand-img noselect"
                      src="https://lh3.googleusercontent.com/pw/ACtC-3cMnfHSzb529a2rzKsb7JVY2ZrhFtTbn9OcH77cXQ1T5eA4a2Mr9dqc4dWHV_zj4tkdvsB2qNWZnhKSrTiiJPkPICI5K7unXA8qgrmkU34YZFPRdN3XZcKpH6zURmjMB0dNwiFD5ACFlobKwVHJyaKx=s400-no?authuser=0"
@@ -96,6 +97,14 @@ class ResumePage extends Component {
                   </Avatar>
                 </a>
               </div>
+              {/* <br className="noselect"/>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <a href="https://www.doc.ic.ac.uk/~am11218/CV.pdf" target="_blank" rel="noopener noreferrer">
+                  <button style={{ fontSize: '12px', padding: '4px 6px 4px 4px'}} className="btn btn-git">
+                    <FontAwesomeIcon style={{ minWidth: '20px' }} icon={faCloudDownloadAlt}/> Download
+                  </button>
+                </a>
+              </div> */}
             </div>
 
             {/* Experience */}
@@ -233,7 +242,7 @@ class ResumePage extends Component {
             {/*</div>*/}
 
             {/* Classes */}
-            <div className="classes group">
+            {/* <div className="classes group">
               <div className="heading">
                 <h2 className="text-center">Classes</h2>
               </div>
@@ -265,7 +274,7 @@ class ResumePage extends Component {
                 })}
                 </tbody>
               </Table>
-            </div>
+            </div> */}
           </div>
         </section>
         <Footer/>

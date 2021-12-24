@@ -14,7 +14,7 @@ import {faLink} from "@fortawesome/free-solid-svg-icons";
 class Project extends Component {
   render() {
     const {
-      id, title, imgSrc, pretext, date, links, technologies, keywords, demoSrc, award, article
+      title, imgSrc, pretext, date, links, technologies, keywords, demoSrc, award, article
     } = this.props.item;
 
     const tech = String(technologies).split(', ');
@@ -84,28 +84,6 @@ class Project extends Component {
                 </div> */}
               </div>
               <div className="col-md-2 project-left">
-                {demoSrc !== '-' &&
-                <Fragment>
-                  <Link to={`${demoSrc}`}>
-                    <button style={{ fontSize: '13px', padding: '2px' }}
-                            className="btn btn-green">
-                      <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faPlay}/>
-                    </button>
-                  </Link>
-                  <br className="noselect"/>
-                </Fragment>
-                }
-                {article &&
-                <Fragment>
-                  <Link to={`/blog/${id}`}>
-                    <button style={{ fontSize: '13px', padding: '2px' }}
-                            className="btn btn-blue">
-                      <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faCommentAlt}/>
-                    </button>
-                  </Link>
-                  <br className="noselect"/>
-                </Fragment>
-                }
                 {linksP &&
                 <a href={link} target="_blank" rel="noopener noreferrer">
                   {git ?
@@ -118,7 +96,30 @@ class Project extends Component {
                             className="btn btn-blue">
                       <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faLink}/>
                     </button>}
+                    <br className="noselect"/>
                 </a>
+                }
+                {article &&
+                <Fragment>
+                  <Link to="../blog">
+                    <button style={{ fontSize: '13px', padding: '2px' }}
+                            className="btn btn-blue">
+                      <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faCommentAlt}/>
+                    </button>
+                  </Link>
+                  <br className="noselect"/>
+                </Fragment>
+                }
+                {demoSrc !== '-' &&
+                <Fragment>
+                  <Link to={`${demoSrc}`}>
+                    <button style={{ fontSize: '13px', padding: '2px' }}
+                            className="btn btn-green">
+                      <FontAwesomeIcon style={{ paddingTop: '1px', minWidth: '20px' }} icon={faPlay}/>
+                    </button>
+                  </Link>
+                  <br className="noselect"/>
+                </Fragment>
                 }
               </div>
             </div>

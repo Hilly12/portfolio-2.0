@@ -330,13 +330,70 @@ const classes = [
     description: "Linear Regression, Ridge Regression, KNN, Logistic Regression, Naive Bayes, Decision Trees, " +
       "Random Forests, SVMs, Neural Networks, Convolutional Neural Networks, K-means, Hierarchical Clustering, " +
       "Principal Components Analysis, Graph Clustering, Cluster Comparision, Graph Centrality and PageRank"
-  }
+  },
+  // {
+  //   completed: 1,
+  //   code: "70006",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70006/",
+  //   name: "Computational Finance",
+  //   year: 4,
+  //   description: "",
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70007",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70007/",
+  //   name: "Computational Optimisation",
+  //   year: 4,
+  //   description: ""
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70010",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70010/",
+  //   name: "Deep Learning",
+  //   year: 4,
+  //   description: ""
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70015",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70015/",
+  //   name: "Mathematics for Machine Learning",
+  //   year: 4,
+  //   description: ""
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70016",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70016/",
+  //   name: "Natural Language Processing",
+  //   year: 4,
+  //   description: ""
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70019",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70019/",
+  //   name: "Probabilistic Inference",
+  //   year: 4,
+  //   description: ""
+  // },
+  // {
+  //   completed: 1,
+  //   code: "70028",
+  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70028/",
+  //   name: "Reinforcement Learning",
+  //   year: 4,
+  //   description: ""
+  // },
 ]
 
 const links = ["",
   "https://www.imperial.ac.uk/computing/current-students/computing/computing-first-year/",
   "https://www.imperial.ac.uk/computing/current-students/computing/computing-second-year/",
-  "https://www.imperial.ac.uk/computing/current-students/computing/comp-third-meng/"
+  "https://www.imperial.ac.uk/computing/current-students/computing/comp-third-meng/",
+  "https://www.imperial.ac.uk/computing/current-students/computing/computing-fourth-year/"
 ]
 
 const Modules = {

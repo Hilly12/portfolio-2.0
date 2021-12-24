@@ -14,10 +14,10 @@ import TextField from "@material-ui/core/TextField";
 import Alert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import axios from "axios";
-import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
-import {faAddressCard} from "@fortawesome/free-solid-svg-icons/faAddressCard";
-import {faDragon} from "@fortawesome/free-solid-svg-icons/faDragon";
-import {faCommentAlt} from "@fortawesome/free-solid-svg-icons";
+// import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
+// import {faAddressCard} from "@fortawesome/free-solid-svg-icons/faAddressCard";
+// import {faDragon} from "@fortawesome/free-solid-svg-icons/faDragon";
+// import {faCommentAlt} from "@fortawesome/free-solid-svg-icons";
 
 class LandingPage extends Component {
   constructor(props) {
@@ -143,23 +143,24 @@ class LandingPage extends Component {
             </div> */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img className="brand-img noselect"
-                   src="https://lh3.googleusercontent.com/pw/ACtC-3cMnfHSzb529a2rzKsb7JVY2ZrhFtTbn9OcH77cXQ1T5eA4a2Mr9dqc4dWHV_zj4tkdvsB2qNWZnhKSrTiiJPkPICI5K7unXA8qgrmkU34YZFPRdN3XZcKpH6zURmjMB0dNwiFD5ACFlobKwVHJyaKx=s400-no?authuser=0"
+                   src="https://lh3.googleusercontent.com/pw/ACtC-3cMnfHSzb529a2rzKsb7JVY2ZrhFtTbn9OcH77cXQ1T5eA4a2Mr9dqc4dWHV_zj4tkdvsB2qNWZnhKSrTiiJPkPICI5K7unXA8qgrmkU34YZFPRdN3XZcKpH6zURmjMB0dNwiFD5ACFlobKwVHJyaKx=s400"
                    alt="" onLoad={this.OnLoaded}/>
             </div>
             <div style={{ margin: '25px 0 0 0' }}>
-              <TypingEffect className="lead" typingSpeed={50} pauseBeforeDeleting={2000} pauseBeforeRestarting={50}
-                            data={["Machine Learning Engineer", "Software Developer", "Computer Scientist"]}/>
+              {/* <span className="lead">Software Engineer</span> */}
+              <TypingEffect className="lead" typingSpeed={50} pauseBeforeDeleting={4000} pauseBeforeRestarting={50}
+                            data={["Software Engineer", "Machine Learning Engineer", "Full Stack Developer"]}/>
             </div>
             {/*<p className="bio">Hi</p>*/}
             {/*<br className="noselect"/>*/}
             <br className="noselect"/>
             <hr className="my-2"/>
-            <div className="text-muted nav-info" style={{ margin: '5px 0 5px 0' }}>
+            {/* <div className="text-muted nav-info" style={{ margin: '5px 0 5px 0' }}>
               <p><FontAwesomeIcon icon={faCode} style={{ minWidth: '30px' }}/>Projects</p>
               <p><FontAwesomeIcon icon={faAddressCard} style={{ minWidth: '30px' }}/>Resume</p>
               <p><FontAwesomeIcon icon={faDragon} style={{ minWidth: '30px' }}/>Sandbox</p>
               <p><FontAwesomeIcon icon={faCommentAlt} style={{ minWidth: '30px' }}/>Blog</p>
-            </div>
+            </div> */}
             <br className="noselect"/>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://uk.linkedin.com/in/aahil-mehta" target="_blank" rel="noopener noreferrer">

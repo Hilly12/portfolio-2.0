@@ -11,7 +11,7 @@ class Footer extends Component {
           className="footer-copyright text-center py-3"
           style={{ fontSize: "16px", backgroundColor: "transparent" }}
         >
-          Aahil Mehta © 2021
+          Aahil Mehta © 2022
         </div>
       </footer>
     );

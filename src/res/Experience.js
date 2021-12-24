@@ -1,8 +1,25 @@
 const workexp = [
   {
+    title: "Software Engineer",
+    institution: "Google",
+    period: "Incoming",
+    description: [
+    ],
+  },
+  // {
+  //   title: "Personal Programming Tutor",
+  //   institution: "Imperial College London",
+  //   period: "October 2019 - March 2022",
+  //   description: [
+  //     "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
+  //     "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
+  //     "Marked students' weekly coursework and provided them with personalized feedback."
+  //   ],
+  // },
+  {
     title: "Machine Learning Engineer Intern",
     institution: "Synthesized",
-    period: "April 2021 - Present",
+    period: "April 2021 - September 2021",
     description: [
       "Carried out research on measuring and mitigating bias in datasets and detecting proxies for sensitive columns.",
       "Co-lead the development of a Python library to automatically assess fairness in machine learning models and " + 
@@ -12,19 +29,9 @@ const workexp = [
     ],
   },
   {
-    title: "Teaching Assistant CO120.X",
-    institution: "Imperial College London",
-    period: "October 2019 - Present",
-    description: [
-      "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
-      "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
-      "Marked students’ weekly coursework and provided them with personalized feedback."
-    ],
-  },
-  {
     title: "Software Engineer Intern",
     institution: "Augnito",
-    period: "July 2020 - September 2020",
+    period: "July 2020 - October 2020",
     description: [
       "Developed an MVP for a contextual sales bot in Python.",
       "Carried out research on NLU engines, evaluating different word embeddings, pipelines and frameworks.",
@@ -56,7 +63,7 @@ const education = [
   {
     title: "Computing MEng (Hons)",
     institution: "Imperial College London",
-    period: "October 2018 - Present",
+    period: "October 2018 - July 2022",
     description: [
       "On track for a first class honors",
       "86% average in Programming modules",
