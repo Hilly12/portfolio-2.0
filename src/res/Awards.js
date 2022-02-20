@@ -1,5 +1,9 @@
 const Awards = [
   {
+    text: "ICHack 2022 Runner Up for Best Entertainment Hack",
+    tip: "Build-A-Story"
+  },
+  {
     text: "ICHack 2020 Winner for Best Smart Home / Internet of Things Hack",
     tip: "Porcupine Smart Mirror"
   },
@@ -12,7 +16,7 @@ const Awards = [
     tip: "Pawn only chess engine contest"
   },
   {
-    text: "Blundell’s Ondaatje Hall Medal",
+    text: "Blundell's Ondaatje Hall Medal",
     tip: "Development of School Diversity and Culture"
   },
   {
@@ -20,7 +24,7 @@ const Awards = [
     tip: "Subject Prize"
   },
   {
-    text: "Blundell’s Heads Honors",
+    text: "Blundell's Heads Honors",
     tip: "Outstanding work in Mathematics"
   },
   {

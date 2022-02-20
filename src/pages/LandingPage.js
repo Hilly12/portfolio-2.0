@@ -14,10 +14,11 @@ import TextField from "@material-ui/core/TextField";
 import Alert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import axios from "axios";
-// import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
-// import {faAddressCard} from "@fortawesome/free-solid-svg-icons/faAddressCard";
-// import {faDragon} from "@fortawesome/free-solid-svg-icons/faDragon";
-// import {faCommentAlt} from "@fortawesome/free-solid-svg-icons";
+import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
+import {faAddressCard} from "@fortawesome/free-solid-svg-icons/faAddressCard";
+import {faDragon} from "@fortawesome/free-solid-svg-icons/faDragon";
+import {faCommentAlt} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 class LandingPage extends Component {
   constructor(props) {
@@ -155,12 +156,12 @@ class LandingPage extends Component {
             {/*<br className="noselect"/>*/}
             <br className="noselect"/>
             <hr className="my-2"/>
-            {/* <div className="text-muted nav-info" style={{ margin: '5px 0 5px 0' }}>
-              <p><FontAwesomeIcon icon={faCode} style={{ minWidth: '30px' }}/>Projects</p>
-              <p><FontAwesomeIcon icon={faAddressCard} style={{ minWidth: '30px' }}/>Resume</p>
-              <p><FontAwesomeIcon icon={faDragon} style={{ minWidth: '30px' }}/>Sandbox</p>
-              <p><FontAwesomeIcon icon={faCommentAlt} style={{ minWidth: '30px' }}/>Blog</p>
-            </div> */}
+            <div className="text-muted nav-info" style={{ margin: '5px 0 5px 0' }}>
+              <p><Link to="/projects"><FontAwesomeIcon icon={faCode} style={{ minWidth: '30px' }}/>Projects</Link></p>
+              <p><Link to="/resume"><FontAwesomeIcon icon={faAddressCard} style={{ minWidth: '30px' }}/>Resume</Link></p>
+              <p><Link to="/sandbox"><FontAwesomeIcon icon={faDragon} style={{ minWidth: '30px' }}/>Sandbox</Link></p>
+              <p><Link to="/blog"><FontAwesomeIcon icon={faCommentAlt} style={{ minWidth: '30px' }}/>Blog</Link></p>
+            </div>
             <br className="noselect"/>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://uk.linkedin.com/in/aahil-mehta" target="_blank" rel="noopener noreferrer">

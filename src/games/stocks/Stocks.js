@@ -26,6 +26,7 @@ import {faYahoo} from "@fortawesome/free-brands-svg-icons/faYahoo";
 
 const priceTTL = 86400000; // ms - 1 day
 const statTTL = 1800000; // ms - 30 min
+const tryAgain = 30000; // ms - 30 sec
 
 function fmt(market_cap) {
   return (market_cap / 1000000000.0).toFixed(2) + "B"
@@ -192,7 +193,8 @@ class Stocks extends Component {
         this.setState({
           init_stocks: stocks.data,
           stocks: stocks.data,
-          stocksLoading: false
+          stocksLoading: false,
+          noData: stocks.data.length === 0
         });
         return;
       }
@@ -200,15 +202,17 @@ class Stocks extends Component {
 
     axios.get(`https://dractal.com/stocks/stats/${indexes[country].endpoint}/`).then((response) => {
       let st = response.data.sort((a, b) => b.market_cap - a.market_cap);
+      let noData = st.length === 0;
       this.recomputeBounds(st);
       this.setState({
         init_stocks: st,
         stocks: st,
-        stocksLoading: false
+        stocksLoading: false,
+        noData: noData
       });
       const stocks = {
         data: st,
-        expiry: Date.now() + statTTL,
+        expiry: Date.now() + (noData ? tryAgain : statTTL)
       }
       localStorage.setItem(this.state.index, JSON.stringify(stocks));
     });
@@ -327,6 +331,7 @@ class Stocks extends Component {
   render() {
     const stocks = this.state.stocks;
     const prices = this.state.prices;
+    const noData = this.state.noData;
     const lastPage = Math.ceil(this.state.stocks.length / 50);
     const min = Math.max(Math.min(Math.max(0, this.state.page - 2), lastPage - 5), 0);
     const max = Math.min(lastPage, min + 5);
@@ -365,7 +370,7 @@ class Stocks extends Component {
             <Placeholder classes="landing-placeholder" margin="15% auto auto"/> :
             <div className="classes group">
               <Fragment>
-                <Alert color="danger" isOpen={stocks !== null && stocks.length === 0}>
+                <Alert color="danger" isOpen={noData}>
                   Blocked by Yahoo, temporarily unavailabe :(
                 </Alert>
                 <div className="table-overflow">
@@ -374,7 +379,7 @@ class Stocks extends Component {
                     <tr className="text-muted stock-row" style={{ whiteSpace: 'pre' }}>
                       <th/>
                       <th onClick={() => this.sortBy('current_price')} className="stock-row-h">
-                        Price (1D) {' '}<FontAwesomeIcon icon={faSort}/>
+                        Price (%1D) {' '}<FontAwesomeIcon icon={faSort}/>
                       </th>
                       <th onClick={() => this.sortBy('market_cap')} className="stock-row-h">
                         Market Cap {' '}<FontAwesomeIcon icon={faSort}/>

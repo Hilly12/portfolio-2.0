@@ -176,8 +176,8 @@ const classes = [
     link: "https://www.imperial.ac.uk/computing/current-students/courses/220/",
     name: "Software Engineering Design",
     year: 2,
-    description: "TDD, Mock Objects, Code Metrics, Dependencies, Distribution and Web Services, Continuous Delivery, " +
-      "Design Patterns"
+    description: "Test Driven Development, Mock Objects, Code Metrics, Dependencies, Distribution and Web Services, " +
+      "Continuous Delivery, Design Patterns"
   },
   {
     completed: 1,
@@ -291,7 +291,7 @@ const classes = [
     link: "https://www.imperial.ac.uk/computing/current-students/courses/60015/",
     name: "Network and Web Security",
     year: 3,
-    description: "Threat Modelling, Internet Security, Server-side Security, Client-side Security, " +
+    description: "Threat Modelling, Internet Security, Server-Side Security, Client-Side Security, " +
       "Secure Web Sessions, Emerging Security Standards, Online Privacy Issues"
   },
   {
@@ -329,16 +329,17 @@ const classes = [
     year: 3,
     description: "Linear Regression, Ridge Regression, KNN, Logistic Regression, Naive Bayes, Decision Trees, " +
       "Random Forests, SVMs, Neural Networks, Convolutional Neural Networks, K-means, Hierarchical Clustering, " +
-      "Principal Components Analysis, Graph Clustering, Cluster Comparision, Graph Centrality and PageRank"
+      "Principal Components Analysis, Graph Clustering, Cluster Comparision, Graph Centrality"
   },
-  // {
-  //   completed: 1,
-  //   code: "70006",
-  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70006/",
-  //   name: "Computational Finance",
-  //   year: 4,
-  //   description: "",
-  // },
+  {
+    completed: 1,
+    code: "70006",
+    link: "https://www.imperial.ac.uk/computing/current-students/courses/70006/",
+    name: "Computational Finance",
+    year: 4,
+    description: "Cash Flow Streams, Time-Value of Money, Fixed-Income Securities, Mean Variance Portfolio Theory, " +
+      "Capital Asset Pricing Model, Asset Price Dynamics, Basic Options Theory, Arbitrage Pricing",
+  },
   // {
   //   completed: 1,
   //   code: "70007",
@@ -355,14 +356,15 @@ const classes = [
   //   year: 4,
   //   description: ""
   // },
-  // {
-  //   completed: 1,
-  //   code: "70015",
-  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70015/",
-  //   name: "Mathematics for Machine Learning",
-  //   year: 4,
-  //   description: ""
-  // },
+  {
+    completed: 1,
+    code: "70015",
+    link: "https://www.imperial.ac.uk/computing/current-students/courses/70015/",
+    name: "Mathematics for Machine Learning",
+    year: 4,
+    description: "Vector Calculus, Multivariate Probability Distributions, Continuous Optimization, " +
+      "Linear Regression, Bayesian Linear Regression, Principal Components Analysis"
+  },
   // {
   //   completed: 1,
   //   code: "70016",
@@ -379,14 +381,15 @@ const classes = [
   //   year: 4,
   //   description: ""
   // },
-  // {
-  //   completed: 1,
-  //   code: "70028",
-  //   link: "https://www.imperial.ac.uk/computing/current-students/courses/70028/",
-  //   name: "Reinforcement Learning",
-  //   year: 4,
-  //   description: ""
-  // },
+  {
+    completed: 1,
+    code: "70028",
+    link: "https://www.imperial.ac.uk/computing/current-students/courses/70028/",
+    name: "Reinforcement Learning",
+    year: 4,
+    description: "Markov Reward Processes, Dynamic Programming, Monte-Carlo Learning, Temporal Difference Learning, " +
+      "Deep Q-Learning, Policy Gradients, Actor Critic Methods"
+  },
 ]
 
 const links = ["",

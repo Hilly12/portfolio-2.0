@@ -63,7 +63,7 @@ const education = [
   {
     title: "Computing MEng (Hons)",
     institution: "Imperial College London",
-    period: "October 2018 - July 2022",
+    period: "October 2018 - Present",
     description: [
       "On track for a first class honors",
       "86% average in Programming modules",
