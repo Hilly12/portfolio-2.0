@@ -9,6 +9,7 @@ import { CodeBlock } from '@atlaskit/code';
 import Code from "../components/Code";
 import {Table} from "reactstrap";
 import CopyButton from "../components/CopyButton"
+import Latex from "react-latex";
 
 const ttl = 600000; // ms - 10 min
 const avatarSrc = "https://lh3.googleusercontent.com/pw/ACtC-3eRLY0BM1VpQyxfavShxfukNKuTgwBCNc4vhrn6kQjxNMY58bzBfc_tjFbUmg6Y66xApp-P5Wxwxi2hArJLqiZwQIxLywTJdmBNrmUc8-7fxB2C8SgHT-aX6TVQ6VxhGrEU3R5dBNGx4lOGjmUpVrOR=s60";
@@ -83,6 +84,10 @@ function visit(node, toc = null, props = null) {
       return img(node.getAttribute('src'), key);
     case 'a':
       return <a key={key} href={node.getAttribute('href')}>{children}</a>;
+    case 'tex':
+      return <Latex key={key}>{node.innerHTML}</Latex>;
+    case 'texblock':
+      return <Latex displayMode={true} key={key}>{node.innerHTML}</Latex>;
     case 'm':
       return <Code key={key}>{children}</Code>;
     case 'am':
@@ -91,7 +96,7 @@ function visit(node, toc = null, props = null) {
       const lang = node.getAttribute('lang');
       const lined = node.getAttribute('lined');
       const html = (node.children.length > 0 && node.children[0].tagName === "pre") ? node.children[0].innerHTML : node.innerHTML;
-      let lines = html.split("\n")
+      let lines = html.split("\n").map(l => l.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&"));
       let startIndex, finishIndex;
       for (startIndex = 0; startIndex < lines.length; startIndex++)
         if (lines[startIndex].trim() !== "")
