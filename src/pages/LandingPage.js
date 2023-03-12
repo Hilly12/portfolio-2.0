@@ -144,7 +144,7 @@ class LandingPage extends Component {
             </div> */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img className="brand-img noselect"
-                   src="https://lh3.googleusercontent.com/pw/ACtC-3cMnfHSzb529a2rzKsb7JVY2ZrhFtTbn9OcH77cXQ1T5eA4a2Mr9dqc4dWHV_zj4tkdvsB2qNWZnhKSrTiiJPkPICI5K7unXA8qgrmkU34YZFPRdN3XZcKpH6zURmjMB0dNwiFD5ACFlobKwVHJyaKx=s400"
+                   src="https://lh3.googleusercontent.com/pw/AMWts8Agkq-YRzPWNHmYRjRd_zpFQbH_XJJftka81pJkb6v1WwP_3rXuHnC4AgLA7eHsONiXqgryHbCQizOU_0saj-5m15LKYahDdSDtXmcBLiYyLM354qvOxdGTd2Lqua6GafkeuOlPVW1Abcor8LzWJXR6gQ=s639-no"
                    alt="" onLoad={this.OnLoaded}/>
             </div>
             <div style={{ margin: '25px 0 0 0' }}>

@@ -2,29 +2,32 @@ const workexp = [
   {
     title: "Software Engineer",
     institution: "Google",
-    period: "Incoming",
+    period: "August 2022 - Present",
     description: [
+      "Applied research in recommendations and user modelling on the RecML team.",
+      "Collaborating with Play to improve their modelling infrastructure and experiment with " +
+      "new modelling technologies to increase revenue on several surfaces.",
     ],
   },
-  // {
-  //   title: "Personal Programming Tutor",
-  //   institution: "Imperial College London",
-  //   period: "October 2019 - March 2022",
-  //   description: [
-  //     "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
-  //     "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
-  //     "Marked students' weekly coursework and provided them with personalized feedback."
-  //   ],
-  // },
+  {
+    title: "Personal Programming Tutor",
+    institution: "Imperial College London",
+    period: "October 2019 - March 2022",
+    description: [
+      "Ran weekly sessions for first year Computing students covering concepts such as higher order functions, " +
+      "polymorphism, object-oriented programming, and concurrency, in Haskell, Kotlin and Java.",
+      "Marked students' weekly coursework and provided them with personalized feedback."
+    ],
+  },
   {
     title: "Machine Learning Engineer Intern",
     institution: "Synthesized",
     period: "April 2021 - September 2021",
     description: [
-      "Carried out research on measuring and mitigating bias in datasets and detecting proxies for sensitive columns.",
-      "Co-lead the development of a Python library to automatically assess fairness in machine learning models and " + 
-      "datasets.",
-      "Additionally worked on open sourcing the library, creating a documentation with detailed tutorials and user " +
+      "Carried out research on measuring and mitigating biases in data, and detecting proxies for sensitive features.",
+      "Co-led the development of a Python library to automatically assess fairness in machine learning models and " + 
+      "in data.",
+      "Additionally, worked on open sourcing the library, writing a documentation with detailed tutorials and user " +
       "guides."
     ],
   },
@@ -61,24 +64,21 @@ const workexp = [
 
 const education = [
   {
-    title: "Computing MEng (Hons)",
+    title: "Masters of Engineering in Computing",
     institution: "Imperial College London",
     period: "October 2018 - July 2022",
     description: [
-      "On track for a first class honors",
-      "86% average in Programming modules",
-      "72% average in Algorithms modules"
+      "Computer Science with a focus on Machine Learning in the final year.",
+      "Masters thesis on 'Fairness in Privacy-Preserving Machine Learning'.",
     ],
   },
   {
-    title: "Secondary School (A-Levels)",
+    title: "A Levels",
     institution: "Blundell's School",
     period: "September 2016 - July 2018",
     description: [
-      "A*AAAAA in Maths, Further Maths, Computing, Physics, Chemistry, EPQ",
-      "Vice Chair of International Committee - lead multiple social, cultural and charitable events",
-      "Chair of the E-Safety Committee - promoted web safety",
-      "Grade 8 Public Speaking with Distinction",
+      "Mathematics, Further Mathematics, Computing, Physics, Chemistry, EPQ on Procedural Generation.",
+      "Extracurriculars including public speaking, cross country, volunteering, young enterprise."
     ],
   },
 ];

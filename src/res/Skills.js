@@ -1,10 +1,10 @@
 const languages = [
   {
-    name: "Java",
+    name: "Python",
     proficiency: 100,
   },
   {
-    name: "Python",
+    name: "Java",
     proficiency: 100,
   },
   {
@@ -18,7 +18,7 @@ const languages = [
   {
     name: "Haskell",
     proficiency: 70,
-  }
+  },
 ];
 
 const languageDetails = [
@@ -52,8 +52,8 @@ const languageDetails = [
 const languageExtra = ['Haskell', 'Kotlin', 'Go', 'SQL', 'Bash', '...'];
 
 const frameworks = [
-  'PyData Stack', 'Tensorflow', 'PyTorch', 'Keras', 'Django', 'Flask', 'ExpressJS',
-  'Postgres', 'MongoDB', 'Unity', 'React', '.NET', 'Android Development'
+  'Tensorflow', 'Keras', 'TFX', 'Jax', 'Flax', 'PyTorch', 'PyData Stack', 'Django', 'Flask',
+  'ExpressJS', 'Postgres', 'MongoDB', 'Unity', 'React', '.NET', 'Android SDK'
 ];
 
 const Skills = {
