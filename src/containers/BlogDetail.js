@@ -217,7 +217,7 @@ class BlogDetail extends Component {
   fetch() {
     const { blogid } = this.props.match.params;
 
-    axios.get("https://www.dractal.com/stocks/blog/").then((response) => {
+    axios.get("https://www.aahil.dev/stocks/blog/").then((response) => {
       let payload = {
         data: response.data,
         expiry: Date.now() + ttl

@@ -200,7 +200,7 @@ class Stocks extends Component {
       }
     }
 
-    axios.get(`https://dractal.com/stocks/stats/${indexes[country].endpoint}/`).then((response) => {
+    axios.get(`https://aahil.dev/stocks/stats/${indexes[country].endpoint}/`).then((response) => {
       let st = response.data.sort((a, b) => b.market_cap - a.market_cap);
       let noData = st.length === 0;
       this.recomputeBounds(st);
@@ -231,7 +231,7 @@ class Stocks extends Component {
       }
     }
 
-    axios.get('https://dractal.com/stocks/prices/').then((response) => {
+    axios.get('https://aahil.dev/stocks/prices/').then((response) => {
       this.setState({
         prices: process(response.data),
         pricesLoading: false

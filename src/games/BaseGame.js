@@ -3,7 +3,7 @@ import axios from "axios";
 
 // http://127.0.0.1:8000/api/scores/
 // https://www.aahilm.com/api/scores/
-const server = "https://www.dractal.com/stocks/scores/";
+const server = "https://www.aahil.dev/stocks/scores/";
 
 const defaultAdjectives = [
   'aged', 'ancient', 'autumn', 'billowing', 'bitter', 'black', 'blue', 'bold',
