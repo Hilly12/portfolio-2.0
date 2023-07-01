@@ -51,7 +51,7 @@ class BlogList extends Component {
   }
 
   fetch() {
-    axios.get("https://www.aahil.dev/stocks/blog/").then((response) => {
+    axios.get("https://aahil.dev/stocks/blog/").then((response) => {
       let payload = {
         data: response.data,
         expiry: Date.now() + ttl

@@ -13,7 +13,7 @@ import axios from "axios";
 
 // http://127.0.0.1:8000/api/scores/
 // https://www.aahilm.com/api/scores/
-const server = "https://www.aahil.dev/stocks/scores/";
+const server = "https://aahil.dev/stocks/scores/";
 
 export const Swipeable = ({children, ...props}) => {
   const handlers = useSwipeable(props);
